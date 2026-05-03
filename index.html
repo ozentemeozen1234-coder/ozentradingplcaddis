@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="am">
+<head> MR TEMESGEN TESFAY (Manager & owner)
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>ኦዜን ገበያ | OZEN Marketplace - የሙዚቃ፣ ፊልም፣ ቲያትር ቁሳቁሶች</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        /* Ethiopian colors strip */
+        .ethiopia-strip {
+            height: 6px;
+            background: linear-gradient(90deg, #078930 0%, #078930 33%, #fcdd09 33%, #fcdd09 66%, #da121a 66%, #da121a 100%);
+        }
+
+        /* Header */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-inner {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .logo-svg svg {
+            width: 70px;
+            height: 70px;
+        }
+
+        .company-names h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #2c3e50;
+            line-height: 1.2;
+        }
+
+        .company-names .amh {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #e67e22;
+        }
+
+        .company-names .eng {
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            color: #7f8c8d;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #2c3e50;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #e67e22;
+        }
+
+        /* Hero section */
+        .hero {
+            background: linear-gradient(135deg, #1e2a3a 0%, #2c3e50 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #f39c12;
+            color: #2c3e50;
+            padding: 12px 30px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            margin: 0 10px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #f39c12;
+            color: #f39c12;
+        }
+
+        .btn:hover {
+            background: #e67e22;
+            transform: translateY(-3px);
+        }
+
+        /* Categories */
+        .categories {
+            padding: 60px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #f39c12;
+            margin: 10px auto;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #7f8c8d;
+        }
+
+        /* About / Owner */
+        .owner-section {
+            background: #ecf0f1;
+            padding: 60px 0;
+        }
+
+        .owner-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .owner-info {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .owner-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .contact-detail {
+            font-size: 1.2rem;
+            margin: 15px 0;
+        }
+
+        .flag-badge {
+            display: inline-flex;
+            align-items: center;
+            background: white;
+            padding: 8px 15px;
+            border-radius: 40px;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e2a3a;
+            color: #bdc3c7;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            .company-names h1 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="ethiopia-strip"></div>
+
+<header>
+    <div class="container header-inner">
+        <div class="logo-area">
+            <div class="logo-svg">
+                <!-- SVG Logo from previous design -->
+                <svg width="70" height="70" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="45" fill="#f5f7fa" stroke="#2c3e50" stroke-width="2"/>
+                    <ellipse cx="40" cy="65" rx="8" ry="5" fill="#e74c3c" transform="rotate(-20,40,65)"/>
+                    <line x1="46" y1="62" x2="46" y2="30" stroke="#2c3e50" stroke-width="3"/>
+                    <path d="M46,30 Q54,26 58,34" stroke="#2c3e50" stroke-width="2" fill="none"/>
+                    <path d="M20,45 Q35,25 65,25 Q80,25 80,42" stroke="#3498db" stroke-width="2" fill="none"/>
+                    <rect x="32" y="23" width="3" height="4" fill="#3498db"/>
+                    <rect x="44" y="23" width="3" height="4" fill="#3498db"/>
+                    <rect x="56" y="23" width="3" height="4" fill="#3498db"/>
+                    <circle cx="75" cy="70" r="10" fill="#f39c12" opacity="0.9"/>
+                    <circle cx="71" cy="68" r="1.5" fill="#2c3e50"/>
+                    <circle cx="79" cy="68" r="1.5" fill="#2c3e50"/>
+                    <path d="M71,74 Q75,78 79,74" stroke="#2c3e50" stroke-width="1" fill="none"/>
+                    <polygon points="50,12 52,20 60,20 54,26 56,34 50,29 44,34 46,26 40,20 48,20" fill="#f1c40f"/>
+                </svg>
+            </div>
+            <div class="company-names">
+                <h1>ኦዜን ንግድ ድርጅት</h1>
+                <div class="amh">OZEN TRADING PLC</div>
+                <div class="eng">Registered in Ethiopia</div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">መነሻ</a></li>
+                <li><a href="#">ምርቶች</a></li>
+                <li><a href="#">ስለእኛ</a></li>
+                <li><a href="#">አግኙን</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container">
+            <h2>የሙዚቃ፣ ፊልም፣ ቲያትር እና ጥበብ ቁሳቁሶች አስመጪ</h2>
+            <p>ከዓለም ዙሪያ ጥራት ያላቸውን የሙዚቃ መሳሪያዎች፣ የፊልም እና የቲያትር መሳሪያዎች በተመጣጣኝ ዋጋ ያግኙ።</p>
+            <a href="#" class="btn">ምርቶችን ይመልከቱ</a>
+            <a href="#" class="btn btn-outline">አግኙን</a>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">የምርት ምድቦች</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">🎵</div>
+                    <h3>የሙዚቃ መሳሪያዎች</h3>
+                    <p>ከበሮ፣ ጊታር፣ ፒያኖ፣ ማሾሻ፣ ባስ እና ሌሎችም</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎬</div>
+                    <h3>የፊልም መሳሪያዎች</h3>
+                    <p>ካሜራዎች፣ ብርሃን፣ ማይክሮፎን፣ ስቱዲዮ መሳሪያዎች</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎭</div>
+                    <h3>የቲያትር ቁሳቁሶች</h3>
+                    <p>የመድረክ አልባሳት፣ ጌጣጌጥ፣ መድረክ መብራቶች</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎨</div>
+                    <h3>የሥነ ጥበብ ቁሳቁሶች</h3>
+                    <p>ሥዕል፣ ቀለም፣ ብሩሽ፣ ቅርጻ ቅርጽ ቁሳቁሶች</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="owner-section">
+        <div class="container owner-box">
+            <div class="owner-info">
+                <h3>አቶ ተመስገን ተስፋይ ገበረገርግስ</h3>
+                <p><strong>የድርጅቱ ባለቤት / ዳይሬክተር</strong></p>
+                <p class="contact-detail">📞 ስልክ፦ <a href="tel:+251910507112" style="color:#e67e22;">+251910 507 112</a></p>
+                <p>📧 ኢሜይል፦ ozentradingplc.ethio@gmail.com</p>
+                <div class="flag-badge">
+                    <span>🇪🇹</span> <span>ኢትዮጵያ</span>
+                </div>
+            </div>
+            <div class="owner-info">
+                <img src="https://placehold.co/300x200/2c3e50/white?text=OZEN+TRADING" alt="OZEN" style="border-radius: 15px; width:100%; max-width:300px;">
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 60px 0; background: white;">
+        <div class="container">
+            <h2 class="section-title">ለምን ኦዜን መረጡ?</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>✓ ጥራት ያለው ምርት</h3>
+                    <p>ዓለም አቀፍ ደረጃቸውን የጠበቁ የሙዚቃ እና ኪነጥበብ መሳሪያዎች</p>
+                </div>
+                <div class="card">
+                    <h3>✓ ፈጣን አገልግሎት</h3>
+                    <p>ኢትዮጵያ ውስጥ በፍጥነት የማድረስ አቅም</p>
+                </div>
+                <div class="card">
+                    <h3>✓ ተመጣጣኝ ዋጋ</h3>
+                    <p>ከውጭ በቀጥታ በማስመጣት ውድድርን የሚቋቋም ዋጋ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 ኦዜን ንግድ ድርጅት - OZEN TRADING PLC. በኢትዮጵያ ተመዝግቧል።</p>
+        <p style="margin-top: 10px;">አድራሻ፦ አዲስ አበባ፣ ኢትዮጵያ | ስልክ፦ 0910 507 112</p>
+    </div>
+</footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>ኦዜን ንግድ ድርጅት | OZEN TRADING PLC - የሙዚቃ፣ ፊልም፣ ቲያትር ቁሳቁሶች አስመጪ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        .ethiopia-strip {
+            height: 6px;
+            background: linear-gradient(90deg, #078930 0%, #078930 33%, #fcdd09 33%, #fcdd09 66%, #da121a 66%, #da121a 100%);
+        }
+
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-inner {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .logo-svg svg {
+            width: 70px;
+            height: 70px;
+        }
+
+        .company-names h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #2c3e50;
+            line-height: 1.2;
+        }
+
+        .company-names .amh {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #e67e22;
+        }
+
+        .company-names .eng {
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            color: #7f8c8d;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #2c3e50;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #e67e22;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1e2a3a 0%, #2c3e50 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .hero h2 span {
+            font-size: 1.3rem;
+            display: block;
+            color: #f39c12;
+            margin-top: 5px;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        .hero .eng-text {
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #f39c12;
+            color: #2c3e50;
+            padding: 12px 30px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            margin: 0 10px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #f39c12;
+            color: #f39c12;
+        }
+
+        .btn:hover {
+            background: #e67e22;
+            transform: translateY(-3px);
+        }
+
+        .categories {
+            padding: 60px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+            font-size: 0.9rem;
+        }
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #f39c12;
+            margin: 10px auto;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .card h4 {
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+        .card p {
+            color: #7f8c8d;
+        }
+
+        .owner-section {
+            background: #ecf0f1;
+            padding: 60px 0;
+        }
+
+        .owner-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .owner-info {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .owner-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        .owner-info .owner-title {
+            color: #e67e22;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .contact-detail {
+            font-size: 1.1rem;
+            margin: 15px 0;
+        }
+        .contact-detail a {
+            color: #e67e22;
+            text-decoration: none;
+        }
+        .linktree-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #2c3e50;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+        .linktree-btn:hover {
+            background: #e67e22;
+            transform: translateY(-2px);
+        }
+
+        .flag-badge {
+            display: inline-flex;
+            align-items: center;
+            background: white;
+            padding: 8px 15px;
+            border-radius: 40px;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        footer {
+            background: #1e2a3a;
+            color: #bdc3c7;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+            .company-names h1 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="ethiopia-strip"></div>
+
+<header>
+    <div class="container header-inner">
+        <div class="logo-area">
+            <div class="logo-svg">
+                <svg width="70" height="70" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="45" fill="#f5f7fa" stroke="#2c3e50" stroke-width="2"/>
+                    <ellipse cx="40" cy="65" rx="8" ry="5" fill="#e74c3c" transform="rotate(-20,40,65)"/>
+                    <line x1="46" y1="62" x2="46" y2="30" stroke="#2c3e50" stroke-width="3"/>
+                    <path d="M46,30 Q54,26 58,34" stroke="#2c3e50" stroke-width="2" fill="none"/>
+                    <path d="M20,45 Q35,25 65,25 Q80,25 80,42" stroke="#3498db" stroke-width="2" fill="none"/>
+                    <rect x="32" y="23" width="3" height="4" fill="#3498db"/>
+                    <rect x="44" y="23" width="3" height="4" fill="#3498db"/>
+                    <rect x="56" y="23" width="3" height="4" fill="#3498db"/>
+                    <circle cx="75" cy="70" r="10" fill="#f39c12" opacity="0.9"/>
+                    <circle cx="71" cy="68" r="1.5" fill="#2c3e50"/>
+                    <circle cx="79" cy="68" r="1.5" fill="#2c3e50"/>
+                    <path d="M71,74 Q75,78 79,74" stroke="#2c3e50" stroke-width="1" fill="none"/>
+                    <polygon points="50,12 52,20 60,20 54,26 56,34 50,29 44,34 46,26 40,20 48,20" fill="#f1c40f"/>
+                </svg>
+            </div>
+            <div class="company-names">
+                <h1>ኦዜን ንግድ ድርጅት</h1>
+                <div class="amh">OZEN TRADING PLC</div>
+                <div class="eng">Registered in Ethiopia</div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">መነሻ / Home</a></li>
+                <li><a href="#">ምርቶች / Products</a></li>
+                <li><a href="#">ስለእኛ / About</a></li>
+                <li><a href="#">አግኙን / Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container">
+            <h2>የሙዚቃ፣ ፊልም፣ ቲያትር እና ጥበብ ቁሳቁሶች አስመጪ <span>Importers of Musical Instruments, Film, Theater & Arts Objects</span></h2>
+            <p>ከዓለም ዙሪያ ጥራት ያላቸውን የሙዚቃ መሳሪያዎች፣ የፊልም እና የቲያትር መሳሪያዎች በተመጣጣኝ ዋጋ ያግኙ። <br><span class="eng-text">Get high-quality musical instruments, film and theater equipment from around the world at affordable prices.</span></p>
+            <a href="#" class="btn">ምርቶችን ይመልከቱ / View Products</a>
+            <a href="#" class="btn btn-outline">አግኙን / Contact Us</a>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">የምርት ምድቦች</h2>
+            <div class="section-subtitle">Product Categories</div>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">🎵</div>
+                    <h3>የሙዚቃ መሳሪያዎች</h3>
+                    <h4>Musical Instruments</h4>
+                    <p>ከበሮ፣ ጊታር፣ ፒያኖ፣ ማሾሻ፣ ባስ እና ሌሎችም</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎬</div>
+                    <h3>የፊልም መሳሪያዎች</h3>
+                    <h4>Film Equipment</h4>
+                    <p>ካሜራዎች፣ ብርሃን፣ ማይክሮፎን፣ ስቱዲዮ መሳሪያዎች</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎭</div>
+                    <h3>የቲያትር ቁሳቁሶች</h3>
+                    <h4>Theater Materials</h4>
+                    <p>የመድረክ አልባሳት፣ ጌጣጌጥ፣ መድረክ መብራቶች</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎨</div>
+                    <h3>የሥነ ጥበብ ቁሳቁሶች</h3>
+                    <h4>Arts Objects</h4>
+                    <p>ሥዕል፣ ቀለም፣ ብሩሽ፣ ቅርጻ ቅርጽ ቁሳቁሶች</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="owner-section">
+        <div class="container owner-box">
+            <div class="owner-info">
+                <h3>አቶ ተመስገን ተስፋይ ገበረገርግስ</h3>
+                <div class="owner-title">Manager & Owner | የድርጅቱ ባለቤት / ዳይሬክተር</div>
+                <p class="contact-detail">📞 <a href="tel:+251910507112">+251 910 507 112</a></p>
+                <p class="contact-detail">📧 ozentradingplc.ethio@gmail.com</p>
+                <p class="contact-detail">🌐 ozentradingplcaddis.netlify.app</p>
+                <!-- Linktree button added here -->
+                <a href="https://linktr.ee/eththomasozen" target="_blank" class="linktree-btn">
+                    🔗 ሁሉንም እዚህ ያግኙ / All Links Here
+                </a>
+                <div class="flag-badge">
+                    <span>🇪🇹</span> <span>ኢትዮጵያ / Ethiopia</span>
+                </div>
+            </div>
+            <div class="owner-info">
+                <img src="https://placehold.co/300x200/2c3e50/white?text=OZEN+TRADING" alt="OZEN" style="border-radius: 15px; width:100%; max-width:300px;">
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 60px 0; background: white;">
+        <div class="container">
+            <h2 class="section-title">ለምን ኦዜን መረጡ?</h2>
+            <div class="section-subtitle">Why Choose OZEN?</div>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>✓ ጥራት ያለው ምርት</h3>
+                    <h4>Quality Products</h4>
+                    <p>ዓለም አቀፍ ደረጃቸውን የጠበቁ የሙዚቃ እና ኪነጥበብ መሳሪያዎች</p>
+                </div>
+                <div class="card">
+                    <h3>✓ ፈጣን አገልግሎት</h3>
+                    <h4>Fast Service</h4>
+                    <p>ኢትዮጵያ ውስጥ በፍጥነት የማድረስ አቅም</p>
+                </div>
+                <div class="card">
+                    <h3>✓ ተመጣጣኝ ዋጋ</h3>
+                    <h4>Affordable Prices</h4>
+                    <p>ከውጭ በቀጥታ በማስመጣት ውድድርን የሚቋቋም ዋጋ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 ኦዜን ንግድ ድርጅት - OZEN TRADING PLC. በኢትዮጵያ ተመዝግቧል።</p>
+        <p style="margin-top: 10px;">አድራሻ፦ አዲስ አበባ፣ ኢትዮጵያ | ስልክ፦ 0910 507 112</p>
+    </div>
+</footer>
+</body>
+</html>

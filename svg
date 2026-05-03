@@ -1,0 +1,66 @@
+<svg width="500" height="220" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg">
+  <!-- ዳራ ነጭ -->
+  <rect width="500" height="220" fill="#ffffff" rx="12"/>
+  
+  <!-- የኢትዮጵያ ቀለማት ግራ ላይ -->
+  <rect x="0" y="0" width="8" height="220" fill="#078930"/>
+  <rect x="8" y="0" width="6" height="220" fill="#fcdd09"/>
+  <rect x="14" y="0" width="6" height="220" fill="#da121a"/>
+  
+  <!-- ሎጎ ምልክት (በግራ በኩል) -->
+  <g transform="translate(45,50)">
+    <circle cx="60" cy="60" r="58" fill="#f5f7fa" stroke="#2c3e50" stroke-width="3"/>
+    <!-- የሙዚቃ ኖት -->
+    <ellipse cx="48" cy="78" rx="10" ry="7" fill="#e74c3c" transform="rotate(-20,48,78)"/>
+    <line x1="55" y1="75" x2="55" y2="35" stroke="#2c3e50" stroke-width="4"/>
+    <path d="M55,35 Q65,30 70,40" stroke="#2c3e50" stroke-width="3" fill="none"/>
+    <!-- የፊልም ስትሪፕ -->
+    <path d="M20,55 Q40,30 80,30 Q100,30 100,50" stroke="#3498db" stroke-width="3" fill="none"/>
+    <rect x="35" y="28" width="4" height="5" fill="#3498db"/>
+    <rect x="50" y="28" width="4" height="5" fill="#3498db"/>
+    <rect x="65" y="28" width="4" height="5" fill="#3498db"/>
+    <rect x="80" y="28" width="4" height="5" fill="#3498db"/>
+    <!-- የቲያትር ጭምብል -->
+    <circle cx="90" cy="85" r="14" fill="#f39c12" opacity="0.9"/>
+    <circle cx="85" cy="82" r="2" fill="#2c3e50"/>
+    <circle cx="95" cy="82" r="2" fill="#2c3e50"/>
+    <path d="M84,90 Q90,95 96,90" stroke="#2c3e50" stroke-width="1.5" fill="none"/>
+    <!-- ኮከብ -->
+    <polygon points="60,12 63,22 73,22 65,29 68,39 60,33 52,39 55,29 47,22 57,22" fill="#f1c40f"/>
+  </g>
+  
+  <!-- የድርጅት ስም በአማርኛ እና በእንግሊዝኛ -->
+  <text x="175" y="65" font-family="'Nyala', 'Ethiopic', 'Segoe UI', Arial, sans-serif" font-weight="bold" font-size="28" fill="#2c3e50">
+    ኦዜን ንግድ ድርጅት
+  </text>
+  <text x="175" y="90" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d" letter-spacing="1">
+    OZEN TRADING PLC
+  </text>
+  
+  <!-- መግለጫ -->
+  <text x="175" y="118" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">
+    የሙዚቃ መሳሪያዎች፣ የፊልም፣ የቲያትር እና የሥነ ጥበብ ቁሳቁሶች አስመጪ
+  </text>
+  
+  <!-- መለያ መስመር -->
+  <line x1="175" y1="135" x2="430" y2="135" stroke="#bdc3c7" stroke-width="1"/>
+  
+  <!-- ባለቤት ስም -->
+  <text x="175" y="158" font-family="Arial, sans-serif" font-weight="bold" font-size="13" fill="#34495e">
+    አቶ ተመስገን ተስፋይ ገበረገርግስ
+  </text>
+  
+  <!-- ስልክ ቁጥር -->
+  <text x="175" y="180" font-family="Arial, sans-serif" font-size="13" fill="#e67e22">
+    📞 0910 507 112
+  </text>
+  
+  <!-- ኢትዮጵያ ባጅ -->
+  <g transform="translate(175, 196)">
+    <rect width="80" height="22" rx="4" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+    <rect x="6" y="4" width="14" height="14" fill="#da121a"/>
+    <rect x="11" y="4" width="9" height="14" fill="#fcdd09"/>
+    <rect x="16" y="4" width="4" height="14" fill="#078930"/>
+    <text x="36" y="15" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2c3e50">ኢትዮጵያ</text>
+  </g>
+</svg>
